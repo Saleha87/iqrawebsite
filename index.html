@@ -4,22 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sign up page</title>
-    <img src="C:\Users\simpl\Desktop\iqra_website\iqrawebsite\resources\cropped-ICI-Logo.png">
+    <link rel="stylesheet" href="resources\CSS\index.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Log in page</title>
+    <img src="resources\cropped-ICI-Logo.png">
 </head>
 <body>
 <center>
+
     <form>
-        <h1>sign up</h1>
-        <div>
-            <lable>First Name</lable>
-            <input type="text" required></input>
+        <div class="container">
+            <form action="/action_page.php">
+                <label for="usrname">Username</label>
+                    <input type="text" id="usrname" name="usrname" required>
+        
+                <label for="psw">Password</label>
+                    <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+        
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        
+        <div id="message">
+            <h3>Password must contain the following:</h3>
+            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+            <p id="number" class="invalid">A <b>number</b></p>
+            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
         </div>
         <div>
-            <lable>Last name</lable>
-            <input type="text" required></input>
+            <form>
+                <p>Or sign up using</p>
+                <input type="button" onclick="window.location.href='signUp.html';" value="Sign UP">
+            </form>
         </div>
     </form>
-</center>
+  </center>
 </body>
 </html>
